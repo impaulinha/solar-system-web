@@ -88,6 +88,102 @@ canvas {
   max-width: 100%;
 }
 
+/* ------------------------------------------ */
+/* Starfield — 3 camadas de profundidade       */
+/* ------------------------------------------ */
+
+.stars-sm,
+.stars-md,
+.stars-lg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.stars-sm {
+  box-shadow:
+    120px 340px #fff,
+    450px 80px #fff,
+    780px 210px #fff,
+    230px 560px #fff,
+    670px 430px #fff,
+    1100px 90px #fff,
+    890px 670px #fff,
+    340px 720px #fff,
+    560px 300px #fff,
+    980px 450px #fff,
+    150px 190px #fff,
+    720px 580px #fff,
+    1280px 340px #fff,
+    60px 480px #fff,
+    430px 620px #fff,
+    810px 130px #fff,
+    1050px 560px #fff,
+    290px 390px #fff,
+    640px 710px #fff,
+    1180px 250px #fff;
+  opacity: 0.5;
+  animation: twinkle 4s ease-in-out infinite alternate;
+}
+
+.stars-md {
+  width: 2px;
+  height: 2px;
+  box-shadow:
+    200px 150px #fff,
+    580px 480px #fff,
+    920px 220px #fff,
+    370px 640px #fff,
+    740px 360px #fff,
+    1160px 510px #fff,
+    80px 290px #fff,
+    490px 70px #fff,
+    850px 590px #fff,
+    1220px 400px #fff,
+    310px 460px #fff,
+    660px 180px #fff;
+  opacity: 0.35;
+  animation: twinkle 6s ease-in-out infinite alternate;
+}
+
+.stars-lg {
+  width: 3px;
+  height: 3px;
+  box-shadow:
+    350px 250px #fff,
+    750px 550px #fff,
+    1100px 150px #fff,
+    180px 680px #fff,
+    520px 400px #fff,
+    950px 320px #fff;
+  opacity: 0.2;
+  animation: twinkle 8s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stars-sm,
+  .stars-md,
+  .stars-lg {
+    animation: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
