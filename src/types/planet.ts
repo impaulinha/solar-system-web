@@ -1,3 +1,5 @@
+import type { PlanetDetails } from '@/types/planetDetails'
+
 export type PlanetColor =
   | 'planet-mercury'
   | 'planet-venus'
@@ -20,4 +22,6 @@ export interface Planet {
   description: string
 }
 
-export type PlanetId = string
+export type PlanetFull = Planet & {
+  details?: PlanetDetails
+}
