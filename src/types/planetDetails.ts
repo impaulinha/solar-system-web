@@ -1,4 +1,4 @@
-export interface PlanetDetails {
+export interface IPlanetDetails {
   id: string
   name: string
   mass: string

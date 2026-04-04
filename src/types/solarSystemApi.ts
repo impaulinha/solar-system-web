@@ -1,30 +1,30 @@
-interface SolarBodyMass {
+interface ISolarBodyMass {
   massValue: number
   massExponent: number
 }
 
-interface SolarBodyVolume {
+interface ISolarBodyVolume {
   volValue: number
   volExponent: number
 }
 
-interface SolarBodyMoon {
+interface ISolarBodyMoon {
   moon: string
   rel: string
 }
 
-export interface SolarSystemBody {
+export interface ISolarSystemBody {
   id: string
   name: string
   englishName: string
   isPlanet: boolean
-  mass: SolarBodyMass | null
-  vol: SolarBodyVolume | null
+  mass: ISolarBodyMass | null
+  vol: ISolarBodyVolume | null
   gravity: number
   meanRadius: number
   sideralOrbit: number
   sideralRotation: number
-  moons: SolarBodyMoon[] | null
+  moons: ISolarBodyMoon[] | null
   avgTemp: number
   axialTilt: number
 }

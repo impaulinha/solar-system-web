@@ -1,6 +1,6 @@
-import type { PlanetDetails } from '@/types/planetDetails'
+import type { IPlanetDetails } from '@/types/planetDetails'
 
-export type PlanetColor =
+export type IPlanetColor =
   | 'planet-mercury'
   | 'planet-venus'
   | 'planet-earth'
@@ -10,18 +10,18 @@ export type PlanetColor =
   | 'planet-uranus'
   | 'planet-neptune'
 
-export interface Planet {
+export interface IPlanet {
   id: string
   index: number
   name: string
   apiId: string
   nasaQuery: string
   texture: string
-  color: PlanetColor
+  color: IPlanetColor
   ringTexture?: string
   description: string
 }
 
-export type PlanetFull = Planet & {
-  details?: PlanetDetails
+export type IPlanetFull = IPlanet & {
+  details?: IPlanetDetails
 }

@@ -1,10 +1,10 @@
-interface NasaImageLink {
+interface INasaImageLink {
   href: string
   rel: string
   render?: string
 }
 
-interface NasaImageData {
+interface INasaImageData {
   title: string
   description: string
   date_created: string
@@ -12,22 +12,22 @@ interface NasaImageData {
   media_type: string
 }
 
-interface NasaImageItem {
+interface INasaImageItem {
   href: string
-  links: NasaImageLink[]
-  data: NasaImageData[]
+  links: INasaImageLink[]
+  data: INasaImageData[]
 }
 
-interface NasaCollectionMetadata {
+interface INasaCollectionMetadata {
   total_hits: number
 }
 
-interface NasaCollection {
+interface INasaCollection {
   href: string
-  items: NasaImageItem[]
-  metadata: NasaCollectionMetadata
+  items: INasaImageItem[]
+  metadata: INasaCollectionMetadata
 }
 
-export interface NasaSearchResponse {
-  collection: NasaCollection
+export interface INasaSearchResponse {
+  collection: INasaCollection
 }
